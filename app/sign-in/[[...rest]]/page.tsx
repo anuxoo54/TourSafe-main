@@ -11,6 +11,7 @@ export default function SignInPage() {
   return (
     <>
       {/* Do not show Navbar on SignIn page */}
+      
       <div className={`min-h-screen flex flex-col items-center justify-center ${
         !isAdminLogin
           ? "bg-cover bg-center bg-no-repeat"
@@ -44,10 +45,11 @@ export default function SignInPage() {
         <div className="w-full max-w-md z-50">
           {!isAdminLogin ? (
             <>
-              <SignIn
+                <SignIn
                 path="/sign-in"
                 routing="path"
                 signUpUrl="/sign-up"
+                afterSignInUrl="/tourist-info"
                 appearance={{
                   elements: {
                     formButtonPrimary: 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700',
@@ -61,7 +63,7 @@ export default function SignInPage() {
                 }}
               />
               <div className="mt-6 text-center z-50">
-                <Link href="/learn-more">
+                <Link href="/learn-more" legacyBehavior>
                   <a className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition">
                     Learn More
                   </a>
@@ -123,7 +125,6 @@ export default function SignInPage() {
             </form>
           )}
         </div>
-        <Footer />
       </div>
     </>
   );
