@@ -25,7 +25,7 @@ const CabFare = () => {
   const [error, setError] = useState<string | null>(null);
 
   // Your DistanceMatrix API key
-  const apiKey = "Hn35QAGQ2WpW1e5es6eD73fGNRkBZwyLWjDOSKuxWZvd1aBf3iPxtCozSwOrXXaG"; /
+  const apiKey = "Hn35QAGQ2WpW1e5es6eD73fGNRkBZwyLWjDOSKuxWZvd1aBf3iPxtCozSwOrXXaG";
 
   // Function to fetch distance between source and destination
   const getDistance = async () => {
